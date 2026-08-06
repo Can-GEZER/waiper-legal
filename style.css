@@ -1,0 +1,253 @@
+:root {
+  --bg: #0A0E0A;
+  --surface: #141A14;
+  --surface-elevated: #1A211A;
+  --surface-highest: #1F2A1F;
+  --primary: #00FF85;
+  --on-primary: #001F0E;
+  --accent: #00D9FF;
+  --text-primary: #E8FFE8;
+  --text-secondary: #9FB0A0;
+  --border: #26312a;
+  --error: #FF3838;
+  --max-width: 760px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+
+header.site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0 8px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.brand .logo-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 12px var(--primary);
+  flex-shrink: 0;
+}
+
+.brand span {
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+}
+
+nav.top-links {
+  display: flex;
+  gap: 18px;
+  font-size: 0.9rem;
+}
+
+nav.top-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+nav.top-links a:hover,
+nav.top-links a[aria-current="page"] {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.lang-toggle {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.lang-toggle button {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+.lang-toggle button.active {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin: 0 0 6px;
+  color: var(--text-primary);
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin: 36px 0 12px;
+  padding-top: 8px;
+}
+
+h2:first-of-type {
+  margin-top: 8px;
+}
+
+h3 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin: 20px 0 8px;
+}
+
+p, li {
+  color: var(--text-secondary);
+  font-size: 0.97rem;
+}
+
+strong {
+  color: var(--text-primary);
+}
+
+ul, ol {
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+a {
+  color: var(--accent);
+}
+
+.meta {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 28px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin: 18px 0;
+}
+
+.card.accent {
+  border-color: rgba(0, 255, 133, 0.3);
+  background: rgba(0, 255, 133, 0.04);
+}
+
+.badge {
+  display: inline-block;
+  background: var(--surface-highest);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  margin-right: 6px;
+}
+
+.lang-block[data-lang="en"] {
+  display: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 0.9rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+th {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.cta-row a.button {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--on-primary);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+}
+
+.cta-row a.button.secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+footer.site {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+}
+
+footer.site a {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 480px) {
+  header.site {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
