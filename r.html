@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waiper - Davet / Invite</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="/">
+      <span class="logo-dot"></span>
+      <span>Waiper</span>
+    </a>
+    <div class="lang-toggle">
+      <button data-lang-btn="tr">TR</button>
+      <button data-lang-btn="en">EN</button>
+    </div>
+  </header>
+
+  <div class="lang-block" data-lang="tr">
+    <h1>Waiper'a davet edildin</h1>
+    <p>Arkadaşın seni Waiper'a davet etti. Uygulamayı indirip Google hesabınla giriş yaptığında davet kodu otomatik uygulanır ve 30 gün boyunca günlük +20 yapay zeka mesajı kazanırsın.</p>
+    <div class="card accent">
+      <p style="margin:0">Davet kodun: <strong data-code>-</strong></p>
+      <p class="meta" style="margin-bottom:0">Kod otomatik uygulanmazsa Profil &gt; Arkadaşını Davet Et ekranından elle girebilirsin.</p>
+    </div>
+    <div class="cta-row">
+      <a class="button" data-store-link href="#">Google Play'den indir</a>
+      <a class="button secondary" data-open-link href="#">Uygulamada aç</a>
+    </div>
+  </div>
+
+  <div class="lang-block" data-lang="en">
+    <h1>You're invited to Waiper</h1>
+    <p>A friend invited you to Waiper. Install the app and sign in with Google; the invite code is applied automatically and you get +20 daily AI messages for 30 days.</p>
+    <div class="card accent">
+      <p style="margin:0">Your invite code: <strong data-code>-</strong></p>
+      <p class="meta" style="margin-bottom:0">If it isn't applied automatically, enter it under Profile &gt; Invite a Friend.</p>
+    </div>
+    <div class="cta-row">
+      <a class="button" data-store-link href="#">Get it on Google Play</a>
+      <a class="button secondary" data-open-link href="#">Open in the app</a>
+    </div>
+  </div>
+
+  <footer class="site">
+    <span class="lang-block" data-lang="tr">Waiper &middot; <a href="/privacy.html">Gizlilik</a></span>
+    <span class="lang-block" data-lang="en">Waiper &middot; <a href="/privacy.html">Privacy</a></span>
+  </footer>
+</div>
+<script src="/lang.js"></script>
+<script>
+(function () {
+  // Reached only when the Android App Link did not open the app directly
+  // (app not installed, or links not verified yet). /r/{code} is rewritten here by _redirects.
+  var PACKAGE = "com.cangzr.waiper";
+  var match = window.location.pathname.match(/^\/r\/([A-Za-z0-9]{4,16})\/?$/);
+  var code = match ? match[1].toUpperCase() : null;
+
+  // Play keeps &referrer and hands it to the app after install (Install Referrer API),
+  // which reads "ref=CODE" - see PendingReferralRepository.parseReferrerCode.
+  var storeUrl = "https://play.google.com/store/apps/details?id=" + PACKAGE +
+    (code ? "&referrer=" + encodeURIComponent("ref=" + code) : "");
+  // Opens the app if installed, otherwise Chrome falls back to the Play listing.
+  var intentUrl = "intent://referral" + (code ? "?code=" + code : "") +
+    "#Intent;scheme=waiper;package=" + PACKAGE +
+    ";S.browser_fallback_url=" + encodeURIComponent(storeUrl) + ";end";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("[data-code]").forEach(function (el) { el.textContent = code || "-"; });
+    document.querySelectorAll("[data-store-link]").forEach(function (el) { el.href = storeUrl; });
+    document.querySelectorAll("[data-open-link]").forEach(function (el) { el.href = intentUrl; });
+
+    if (/Android/i.test(navigator.userAgent)) {
+      window.location.replace(intentUrl);
+    }
+  });
+})();
+</script>
+</body>
+</html>

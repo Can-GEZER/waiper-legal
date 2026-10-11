@@ -1,0 +1,6 @@
+# Referral links: waiper.com.tr/r/{code} -> invite page (app opens directly when App Links are verified)
+/r/*        /r.html          200
+
+# Paths the Android app links to (paywall footer, profile)
+/privacy    /privacy.html    200
+/terms      /terms.html      200
