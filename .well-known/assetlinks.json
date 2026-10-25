@@ -5,7 +5,8 @@
       "namespace": "android_app",
       "package_name": "com.cangzr.waiper",
       "sha256_cert_fingerprints": [
-        "PLAY_APP_SIGNING_SHA256_BURAYA"
+        "F9:BB:D9:9F:77:18:E6:A1:FC:92:89:05:60:47:D3:13:63:C6:9B:46:6A:D2:76:7C:D3:87:AF:97:F2:71:71:F4",
+        "35:3C:09:28:FE:49:9D:14:DC:45:00:A1:90:C5:6F:73:4E:65:56:89:1E:30:7E:CE:5B:2E:60:25:1A:54:D9:8F"
       ]
     }
   }
