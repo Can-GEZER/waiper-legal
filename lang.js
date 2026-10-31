@@ -1,7 +1,8 @@
 (function () {
   function setLang(lang) {
     document.querySelectorAll(".lang-block").forEach(function (el) {
-      el.style.display = el.getAttribute("data-lang") === lang ? "" : "none";
+      // "revert", not "": an empty inline value falls back to style.css, which hides every EN block
+      el.style.display = el.getAttribute("data-lang") === lang ? "revert" : "none";
     });
     document.querySelectorAll("[data-lang-btn]").forEach(function (btn) {
       btn.classList.toggle("active", btn.getAttribute("data-lang-btn") === lang);

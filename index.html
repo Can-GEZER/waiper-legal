@@ -3,50 +3,435 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Waiper - Yasal Sayfalar / Legal</title>
-<meta name="robots" content="noindex">
-<link rel="stylesheet" href="style.css">
+<title>Waiper - Ay sonunu tahmin etme, bil</title>
+<meta name="description" content="Waiper, gelirinden düzenli ödemelerini, taksitlerini ve harcamalarını düşüp her gün ne kadar harcayabileceğini gösteren kişisel finans uygulaması. Yakında Google Play'de.">
+<meta name="theme-color" content="#0A0E0A">
+<link rel="canonical" href="https://waiper.app/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://waiper.app/">
+<meta property="og:site_name" content="Waiper">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Waiper - Ay sonunu tahmin etme, bil">
+<meta property="og:description" content="Bankan ne harcadığını gösterir. Waiper ne kadar harcayabileceğini söyler.">
+<meta property="og:image" content="https://waiper.app/assets/img/og.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/home.css">
 </head>
-<body>
+<body class="home">
 <div class="wrap">
   <header class="site">
-    <a class="brand" href="index.html">
-      <span class="logo-dot"></span>
+    <a class="brand" href="/">
+      <img src="/assets/img/logo-96.png" alt="" width="32" height="32">
       <span>Waiper</span>
     </a>
-    <div class="lang-toggle">
-      <button data-lang-btn="tr">TR</button>
-      <button data-lang-btn="en">EN</button>
+    <div class="header-right">
+      <nav class="top-links">
+        <a href="#ozellikler"><span class="lang-block" data-lang="tr">Özellikler</span><span class="lang-block" data-lang="en">Features</span></a>
+        <a href="#gizlilik"><span class="lang-block" data-lang="tr">Gizlilik</span><span class="lang-block" data-lang="en">Privacy</span></a>
+        <a href="#premium">Premium</a>
+        <a href="#sss"><span class="lang-block" data-lang="tr">SSS</span><span class="lang-block" data-lang="en">FAQ</span></a>
+      </nav>
+      <div class="lang-toggle">
+        <button data-lang-btn="tr">TR</button>
+        <button data-lang-btn="en">EN</button>
+      </div>
     </div>
   </header>
 
-  <div class="lang-block" data-lang="tr">
-    <h1>Waiper - Yasal Sayfalar</h1>
-    <p class="meta">Bu sayfa, Waiper mobil uygulamasının Google Play Store gereklilikleri kapsamında yayınladığı gizlilik, hizmet şartları ve veri silme sayfalarına yönlendirir.</p>
-    <div class="cta-row">
-      <a class="button" href="privacy.html">Gizlilik Politikası</a>
-      <a class="button secondary" href="terms.html">Hizmet Şartları</a>
-      <a class="button secondary" href="account-deletion.html">Hesap ve Veri Silme</a>
-      <a class="button secondary" href="about.html">Hakkında</a>
-    </div>
-  </div>
+  <!-- ============ TÜRKÇE ============ -->
+  <main class="lang-block" data-lang="tr">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Kişisel finans asistanı</p>
+        <h1>Ay sonunu tahmin etme, <span class="hl">bil.</span></h1>
+        <p class="lead">Bankan ne harcadığını gösterir. Waiper ne kadar harcayabileceğini söyler: gelirinden düzenli ödemelerini, taksitlerini ve bu ayki harcamalarını düşer, günde ne kadar harcayabileceğini her gün hazır tutar.</p>
+        <div class="cta">
+          <div class="store-soon" role="note">
+            <small>Yakında</small>
+            <span>Google Play'de</span>
+          </div>
+          <a class="ghost" href="#nasil">Nasıl çalışır</a>
+        </div>
+        <p class="note">Android için. Ücretsiz başlarsın, Premium'u 7 gün ücretsiz denersin.</p>
+      </div>
+      <div class="hero-visual">
+        <img src="/assets/img/hero-phone.webp" width="538" height="1162" alt="Waiper ana ekranı: harcanabilir 2.547 TL, günde yaklaşık 127 TL, 20 gün kaldı">
+      </div>
+    </section>
 
-  <div class="lang-block" data-lang="en">
-    <h1>Waiper - Legal Pages</h1>
-    <p class="meta">This page links to the privacy, terms and account/data deletion pages Waiper publishes for Google Play Store requirements.</p>
-    <div class="cta-row">
-      <a class="button" href="privacy.html">Privacy Policy</a>
-      <a class="button secondary" href="terms.html">Terms of Service</a>
-      <a class="button secondary" href="account-deletion.html">Account &amp; Data Deletion</a>
-      <a class="button secondary" href="about.html">About</a>
-    </div>
-  </div>
+    <section class="section" id="nasil">
+      <div class="section-head">
+        <h2>Üç adımda ay sonunu gör</h2>
+        <p>Hesap tablosu yok. Bir kez kurarsın, gerisini Waiper hesaplar.</p>
+      </div>
+      <ol class="steps">
+        <li><strong>Gelirini gir</strong><p>Maaşını ve maaş gününü yaz. Ay, maaşının yattığı gün başlar.</p></li>
+        <li><strong>Düzenli ödemelerini ekle</strong><p>Kira, faturalar ve abonelikler bir kez girilir, her ay kendiliğinden düşer.</p></li>
+        <li><strong>Harcadıkça kaydet</strong><p>Elle, fişten ya da bankanın bildiriminden. Harcanabilir tutarın anında güncellenir.</p></li>
+      </ol>
+    </section>
+
+    <section class="section" id="ozellikler">
+      <div class="section-head">
+        <h2>Ne kadar harcayabileceğini bil</h2>
+        <p>Waiper geçmişi değil, ayın geri kalanını gösterir.</p>
+      </div>
+      <div class="features">
+        <article class="feature">
+          <h3>Harcanabilir tutar</h3>
+          <p>Gelirinden düzenli ödemeler ve bu ayki harcamaların düşülür. Kalan tutarı, günlük payını ve harcama hızını tek kartta görürsün.</p>
+        </article>
+        <article class="feature">
+          <h3>Taksit yükü</h3>
+          <p>Taksitli alışveriş her aya bölünür. Gelecek aylarda kartından ne kadar taksit düşeceğini önceden görürsün.</p>
+        </article>
+        <article class="feature">
+          <h3>Düzenli ödemeler</h3>
+          <p>Ödeme gününden bir gün önce hatırlatma gelir. Premium'da bir aboneliğe zam gelince ya da onu kullanmıyor gibi görünüyorsan da haber verilir.</p>
+        </article>
+        <article class="feature">
+          <span class="tag">Premium</span>
+          <h3>Otomatik algılama</h3>
+          <p>Seçtiğin bankaların bildirimlerinden harcamalar ve gelen paralar algılanır. Sen onaylayınca kaydedilir.</p>
+        </article>
+        <article class="feature">
+          <h3>Sor, cevabını al</h3>
+          <p>"Bu ay en çok neye harcadım?" diye yaz. Yapay zeka sohbeti kendi verinden cevap verir, harcama da ekleyebilir.</p>
+        </article>
+        <article class="feature">
+          <h3>İçgörüler</h3>
+          <p>Her kategoriyi kendi 3 aylık ortalamanla karşılaştırır. Harcama hızın aydan önde giderse uyarır.</p>
+        </article>
+        <article class="feature">
+          <h3>Hedefler</h3>
+          <p>Birikim hedefi koy. Ne kadarının biriktiğini ve hedefe ulaşmak için ayda ne kadar ayırman gerektiğini görürsün.</p>
+        </article>
+        <article class="feature">
+          <h3>Fiş tarama</h3>
+          <p>Fişin fotoğrafından tutar ve tarih okunur. Tarama tamamen telefonunda yapılır.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Ekran görüntüleri">
+      <div class="gallery">
+        <img src="/assets/img/ss-01.webp" width="720" height="1280" loading="lazy" alt="Harcanabilir tutar: Ay sonunu tahmin etme, bil">
+        <img src="/assets/img/ss-03.webp" width="720" height="1280" loading="lazy" alt="Düzenli ödemeler: Kira günü sürpriz olmasın">
+        <img src="/assets/img/ss-04.webp" width="720" height="1280" loading="lazy" alt="İçgörüler: Bütçen sarsılmadan haberin olsun">
+        <img src="/assets/img/ss-02.webp" width="720" height="1280" loading="lazy" alt="Yapay zeka sohbet: Paranı sorarak yönet">
+        <img src="/assets/img/ss-06.webp" width="720" height="1280" loading="lazy" alt="Analiz: Alışkanlıklarını sayılarla gör">
+        <img src="/assets/img/ss-05.webp" width="720" height="1280" loading="lazy" alt="Harcamalar: Her kuruşun hesabı tek yerde">
+        <img src="/assets/img/ss-07.webp" width="720" height="1280" loading="lazy" alt="Hedefler: Hayalindekine her ay biraz daha yaklaş">
+      </div>
+    </section>
+
+    <section class="section" id="gizlilik">
+      <div class="section-head">
+        <h2>Paran senin, verin de</h2>
+        <p>Banka bildirimlerini okuyan bir uygulamaya güvenmek kolay değil. Neyin nerede kaldığını açıkça yazıyoruz.</p>
+      </div>
+      <div class="privacy-grid">
+        <div class="privacy-item">
+          <h3>Banka şifren istenmez</h3>
+          <p>Waiper bankana bağlanmaz. Sadece telefonuna gelen bildirimleri okur.</p>
+        </div>
+        <div class="privacy-item">
+          <h3>Sadece seçtiğin bankalar</h3>
+          <p>Listeden kendi bankalarını seçersin. Diğer uygulamaların bildirimlerine hiç bakılmaz.</p>
+        </div>
+        <div class="privacy-item">
+          <h3>Nerede okunacağını sen seçersin</h3>
+          <p>Cihazda: bildirim metni telefondan çıkmaz. Gemini: daha yüksek doğruluk için metin ayrıştırılmak üzere Google'a gönderilir.</p>
+        </div>
+        <div class="privacy-item">
+          <h3>Ne okunduğunu görürsün</h3>
+          <p>Algılama geçmişi her bildirimden ne çıkarıldığını gösterir. Bildirimin ham metni saklanmaz.</p>
+        </div>
+        <div class="privacy-item">
+          <h3>Satılmaz, reklam yok</h3>
+          <p>Verin sana ait bir hesapta saklanır. Analitik paylaşımı varsayılan olarak kapalıdır, açarsan açılır.</p>
+        </div>
+        <div class="privacy-item">
+          <h3>İstediğin an sil</h3>
+          <p>Hesabını ve tüm verini uygulamadan silebilirsin. <a href="/account-deletion.html">Nasıl yapılır</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="premium">
+      <div class="section-head">
+        <h2>Ücretsiz başla</h2>
+        <p>Harcanabilir tutarın temeli ücretsiz. Premium planlamayı ve otomasyonu ekler.</p>
+      </div>
+      <div class="plans">
+        <div class="plan">
+          <h3>Ücretsiz</h3>
+          <p class="sub">Süre sınırı yok</p>
+          <ul>
+            <li>Harcanabilir tutar, günlük pay ve harcama hızı</li>
+            <li>Düzenli ödemeler ve ödeme hatırlatmaları</li>
+            <li>Harcama, gelir ve taksit kaydı, fiş tarama</li>
+            <li>Gelecek ayın taksit toplamı</li>
+            <li>Temel içgörüler ve 3 aylık trend</li>
+            <li>1 birikim hedefi</li>
+            <li>Ayda 5 sohbet mesajı</li>
+            <li>İlk 10 otomatik algılama</li>
+          </ul>
+        </div>
+        <div class="plan premium">
+          <h3>Premium</h3>
+          <p class="sub">7 gün ücretsiz dene</p>
+          <ul>
+            <li>6 aylık taksit yükü ve taksitlerden sonra kalan</li>
+            <li>Zam ve kullanılmayan abonelik uyarıları</li>
+            <li>Yapay zeka içgörüleri ve grafik yorumu</li>
+            <li>Uzun dönem trend</li>
+            <li>Sınırsız birikim hedefi</li>
+            <li>Sohbette aylık limit yok</li>
+            <li>Banka bildirimlerinden otomatik algılama</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sss">
+      <div class="section-head">
+        <h2>Sık sorulanlar</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Banka şifremi ya da kart bilgimi istiyor mu?</summary>
+          <p>Hayır. Waiper bankana bağlanmaz, hiçbir banka şifresi ya da kart bilgisi istemez. Otomatik algılama sadece telefonuna gelen bildirimleri okur.</p>
+        </details>
+        <details>
+          <summary>Hangi bankalarla çalışıyor?</summary>
+          <p>Elle kayıt her bankayla çalışır. Otomatik algılama Türkiye'deki 29 banka ve fintech uygulamasının bildirimlerini tanır, listeden kendi kullandıklarını seçersin.</p>
+        </details>
+        <details>
+          <summary>iPhone'da var mı?</summary>
+          <p>Şimdilik sadece Android.</p>
+        </details>
+        <details>
+          <summary>Ne zaman çıkıyor?</summary>
+          <p>Waiper şu an kapalı testte. Google Play'de yayınlandığında bu sayfadan indirebileceksin.</p>
+        </details>
+        <details>
+          <summary>Ücretli mi?</summary>
+          <p>Ücretsiz başlarsın, temel özellikler süre sınırı olmadan ücretsizdir. Premium aylık ya da yıllık abonelikle Google Play üzerinden alınır, ilk 7 gün ücretsizdir. Aboneliği Google Play'den istediğin an iptal edebilirsin.</p>
+        </details>
+        <details>
+          <summary>Verimi nasıl silerim?</summary>
+          <p>Uygulamada Profil > Hesabı sil. Hesabın ve tüm verin kalıcı olarak silinir. Ayrıntılar <a href="/account-deletion.html">hesap silme sayfasında</a>.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ ENGLISH ============ -->
+  <main class="lang-block" data-lang="en">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Personal finance assistant</p>
+        <h1>Don't guess the end of the month. <span class="hl">Know it.</span></h1>
+        <p class="lead">Your bank shows what you spent. Waiper tells you what you can spend: it takes your recurring payments, installments and this month's spending out of your income and keeps your daily allowance ready every day.</p>
+        <div class="cta">
+          <div class="store-soon" role="note">
+            <small>Coming soon</small>
+            <span>to Google Play</span>
+          </div>
+          <a class="ghost" href="#how">How it works</a>
+        </div>
+        <p class="note">For Android. Start free, try Premium free for 7 days.</p>
+      </div>
+      <div class="hero-visual">
+        <img src="/assets/img/hero-phone.webp" width="538" height="1162" alt="Waiper home screen: 2,547 TL spendable, about 127 TL a day, 20 days left">
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="section-head">
+        <h2>See the end of the month in three steps</h2>
+        <p>No spreadsheets. Set it up once and Waiper does the math.</p>
+      </div>
+      <ol class="steps">
+        <li><strong>Enter your income</strong><p>Your salary and payday. Your month starts on the day you get paid.</p></li>
+        <li><strong>Add recurring payments</strong><p>Rent, bills and subscriptions are entered once and come out every month on their own.</p></li>
+        <li><strong>Log as you spend</strong><p>By hand, from a receipt or from your bank's notification. Your spendable amount updates instantly.</p></li>
+      </ol>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-head">
+        <h2>Know how much you can spend</h2>
+        <p>Waiper shows the rest of your month, not just the past.</p>
+      </div>
+      <div class="features">
+        <article class="feature">
+          <h3>Spendable amount</h3>
+          <p>Recurring payments and this month's spending come out of your income. See what's left, your daily share and your spending pace on one card.</p>
+        </article>
+        <article class="feature">
+          <h3>Installment load</h3>
+          <p>Installment purchases are split across months. See ahead how much will come off your card in the months to come.</p>
+        </article>
+        <article class="feature">
+          <h3>Recurring payments</h3>
+          <p>A reminder arrives the day before a payment. With Premium you also hear about it when a subscription's price goes up or when it looks unused.</p>
+        </article>
+        <article class="feature">
+          <span class="tag">Premium</span>
+          <h3>Automatic detection</h3>
+          <p>Spending and incoming money are detected from the notifications of the banks you pick. Saved once you confirm.</p>
+        </article>
+        <article class="feature">
+          <h3>Ask and get answers</h3>
+          <p>Type "What did I spend the most on this month?" The AI chat answers from your own data and can add expenses too.</p>
+        </article>
+        <article class="feature">
+          <h3>Insights</h3>
+          <p>Each category is compared with your own 3-month average. You get a warning when your spending runs ahead of the month.</p>
+        </article>
+        <article class="feature">
+          <h3>Goals</h3>
+          <p>Set a savings goal. See how much you've saved and how much to set aside each month to reach it.</p>
+        </article>
+        <article class="feature">
+          <h3>Receipt scanning</h3>
+          <p>Amount and date are read from a photo of the receipt. Scanning happens entirely on your phone.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Screenshots">
+      <div class="gallery">
+        <img src="/assets/img/ss-01.webp" width="720" height="1280" loading="lazy" alt="Spendable amount">
+        <img src="/assets/img/ss-03.webp" width="720" height="1280" loading="lazy" alt="Recurring payments">
+        <img src="/assets/img/ss-04.webp" width="720" height="1280" loading="lazy" alt="Insights">
+        <img src="/assets/img/ss-02.webp" width="720" height="1280" loading="lazy" alt="AI chat">
+        <img src="/assets/img/ss-06.webp" width="720" height="1280" loading="lazy" alt="Analysis">
+        <img src="/assets/img/ss-05.webp" width="720" height="1280" loading="lazy" alt="Transactions">
+        <img src="/assets/img/ss-07.webp" width="720" height="1280" loading="lazy" alt="Goals">
+      </div>
+    </section>
+
+    <section class="section" id="privacy">
+      <div class="section-head">
+        <h2>Your money, your data</h2>
+        <p>Trusting an app that reads bank notifications isn't easy. Here is exactly what stays where.</p>
+      </div>
+      <div class="privacy-grid">
+        <div class="privacy-item">
+          <h3>No bank password</h3>
+          <p>Waiper never connects to your bank. It only reads the notifications your phone receives.</p>
+        </div>
+        <div class="privacy-item">
+          <h3>Only the banks you pick</h3>
+          <p>You choose your banks from a list. Notifications from other apps are never looked at.</p>
+        </div>
+        <div class="privacy-item">
+          <h3>You choose where it's read</h3>
+          <p>On device: the notification text never leaves your phone. Gemini: for higher accuracy the text is sent to Google to be parsed.</p>
+        </div>
+        <div class="privacy-item">
+          <h3>See what was read</h3>
+          <p>The detection history shows what was extracted from each notification. The raw notification text is not stored.</p>
+        </div>
+        <div class="privacy-item">
+          <h3>Never sold, no ads</h3>
+          <p>Your data lives in an account that belongs to you. Analytics sharing is off by default and only turns on if you turn it on.</p>
+        </div>
+        <div class="privacy-item">
+          <h3>Delete any time</h3>
+          <p>You can delete your account and all your data from the app. <a href="/account-deletion.html">How to</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="plans">
+      <div class="section-head">
+        <h2>Start free</h2>
+        <p>The core of the spendable amount is free. Premium adds planning and automation.</p>
+      </div>
+      <div class="plans">
+        <div class="plan">
+          <h3>Free</h3>
+          <p class="sub">No time limit</p>
+          <ul>
+            <li>Spendable amount, daily share and spending pace</li>
+            <li>Recurring payments and payment reminders</li>
+            <li>Expense, income and installment entry, receipt scanning</li>
+            <li>Next month's installment total</li>
+            <li>Basic insights and 3-month trend</li>
+            <li>1 savings goal</li>
+            <li>5 chat messages a month</li>
+            <li>First 10 automatic detections</li>
+          </ul>
+        </div>
+        <div class="plan premium">
+          <h3>Premium</h3>
+          <p class="sub">Try free for 7 days</p>
+          <ul>
+            <li>6-month installment load and what's left after installments</li>
+            <li>Price increase and unused subscription alerts</li>
+            <li>AI insights and chart commentary</li>
+            <li>Long-term trend</li>
+            <li>Unlimited savings goals</li>
+            <li>No monthly chat limit</li>
+            <li>Automatic detection from bank notifications</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="section-head">
+        <h2>FAQ</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Does it ask for my bank password or card details?</summary>
+          <p>No. Waiper never connects to your bank and never asks for a bank password or card details. Automatic detection only reads the notifications your phone receives.</p>
+        </details>
+        <details>
+          <summary>Which banks does it work with?</summary>
+          <p>Manual entry works with any bank. Automatic detection recognizes notifications from 29 banks and fintech apps in Turkey, and you pick the ones you use.</p>
+        </details>
+        <details>
+          <summary>Is it on iPhone?</summary>
+          <p>Android only for now.</p>
+        </details>
+        <details>
+          <summary>When does it launch?</summary>
+          <p>Waiper is in closed testing. Once it's on Google Play you'll be able to download it from this page.</p>
+        </details>
+        <details>
+          <summary>Is it paid?</summary>
+          <p>You start free, and the core features are free with no time limit. Premium is a monthly or yearly subscription through Google Play, and the first 7 days are free. You can cancel any time from Google Play.</p>
+        </details>
+        <details>
+          <summary>How do I delete my data?</summary>
+          <p>In the app, Profile > Delete account. Your account and all your data are permanently deleted. Details on the <a href="/account-deletion.html">account deletion page</a>.</p>
+        </details>
+      </div>
+    </section>
+  </main>
 
   <footer class="site">
-    <span class="lang-block" data-lang="tr">Waiper &middot; İletişim: <a href="mailto:dcangezer@gmail.com">dcangezer@gmail.com</a></span>
-    <span class="lang-block" data-lang="en">Waiper &middot; Contact: <a href="mailto:dcangezer@gmail.com">dcangezer@gmail.com</a></span>
+    <span>&copy; 2026 Waiper &middot; <a href="mailto:dcangezer@gmail.com">dcangezer@gmail.com</a></span>
+    <nav>
+      <a href="/about.html"><span class="lang-block" data-lang="tr">Hakkında</span><span class="lang-block" data-lang="en">About</span></a>
+      <a href="/privacy.html"><span class="lang-block" data-lang="tr">Gizlilik Politikası</span><span class="lang-block" data-lang="en">Privacy Policy</span></a>
+      <a href="/terms.html"><span class="lang-block" data-lang="tr">Hizmet Şartları</span><span class="lang-block" data-lang="en">Terms of Service</span></a>
+      <a href="/account-deletion.html"><span class="lang-block" data-lang="tr">Hesap ve Veri Silme</span><span class="lang-block" data-lang="en">Account Deletion</span></a>
+    </nav>
   </footer>
 </div>
-<script src="lang.js"></script>
+<script src="/lang.js"></script>
 </body>
 </html>
