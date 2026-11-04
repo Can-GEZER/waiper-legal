@@ -1,0 +1,34 @@
+# Waiper
+
+> Waiper, Türkiye'deki genç çalışanlar için Android kişisel finans uygulaması. Gelirinden düzenli ödemeleri, taksitleri ve bu ayki harcamaları düşer, maaş gününe kadar günde ne kadar harcayabileceğini gösterir. Bankan ne harcadığını gösterir, Waiper ne kadar harcayabileceğini söyler.
+
+Durum: kapalı testte, Google Play'de yakında. Sadece Android. Arayüz Türkçe, para birimi TL.
+
+## Ne yapar
+
+- Harcanabilir tutar: bu ayın geliri eksi düzenli ödemeler eksi bu ayki harcamalar. Günlük pay ve harcama hızı tek kartta.
+- Taksit takibi: taksitli alışveriş her aya bölünür, gelecek 6 ayın taksit yükü önceden görünür.
+- Düzenli ödemeler: kira, fatura ve abonelikler bir kez girilir, her ay kendiliğinden düşer. Ödeme gününden bir gün önce hatırlatma. Premium'da zam ve kullanılmayan abonelik uyarısı.
+- Otomatik algılama (Premium, ücretsizde ilk 10 kayıt): seçilen banka ve fintech uygulamalarının bildirimlerinden harcama ve gelir algılanır, kullanıcı onaylayınca kaydedilir. Türkiye'deki 29 banka ve fintech uygulaması tanınır.
+- Yapay zeka sohbet: kullanıcının kendi verisinden cevap verir, harcama ekleyebilir.
+- İçgörüler, trend, birikim hedefleri, cihazda fiş tarama.
+
+## Gizlilik
+
+- Banka şifresi ya da kart bilgisi istenmez. Waiper bankaya bağlanmaz, sadece telefona gelen bildirimleri okur.
+- Sadece kullanıcının seçtiği bankaların bildirimleri okunur.
+- Ayrıştırma cihazda ya da Gemini ile yapılır, kullanıcı seçer. Ham bildirim metni saklanmaz.
+- Veri satılmaz, reklam yok. Hesap ve tüm veri uygulamadan silinebilir.
+
+## Fiyat
+
+- Ücretsiz katman, süre sınırı yok.
+- Waiper Otopilot (Premium): aylık ya da yıllık Google Play aboneliği, ilk 7 gün ücretsiz.
+
+## Sayfalar
+
+- [Ana sayfa](https://waiper.app/): özellikler, gizlilik, ücretsiz ve Premium karşılaştırması, SSS
+- [Hakkında](https://waiper.app/about.html): nasıl çalıştığı ve özellikleri
+- [Gizlilik Politikası](https://waiper.app/privacy.html): KVKK aydınlatma metni dahil
+- [Hizmet Şartları](https://waiper.app/terms.html): Premium abonelik şartları dahil
+- [Hesap ve Veri Silme](https://waiper.app/account-deletion.html)

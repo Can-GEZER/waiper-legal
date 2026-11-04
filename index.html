@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Waiper - Ay sonunu tahmin etme, bil</title>
-<meta name="description" content="Waiper, gelirinden düzenli ödemelerini, taksitlerini ve harcamalarını düşüp her gün ne kadar harcayabileceğini gösteren kişisel finans uygulaması. Yakında Google Play'de.">
+<title>Waiper: Harcama ve Bütçe Takibi - Ay sonunu tahmin etme, bil</title>
+<meta name="description" content="Harcama ve bütçe takibi uygulaması. Waiper gelirinden düzenli ödemeleri, taksitleri ve harcamaları düşer, günde ne kadar harcayabileceğini söyler. Android.">
 <meta name="theme-color" content="#0A0E0A">
 <link rel="canonical" href="https://waiper.app/">
 <link rel="icon" type="image/png" href="/favicon.png">
@@ -22,6 +22,54 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="/home.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://waiper.app/#org",
+      "name": "Waiper",
+      "url": "https://waiper.app/",
+      "logo": "https://waiper.app/assets/img/logo-96.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://waiper.app/#website",
+      "url": "https://waiper.app/",
+      "name": "Waiper",
+      "inLanguage": ["tr-TR", "en"],
+      "publisher": { "@id": "https://waiper.app/#org" }
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://waiper.app/#app",
+      "name": "Waiper",
+      "description": "Gelirinden düzenli ödemeleri, taksitleri ve bu ayki harcamaları düşüp maaş gününe kadar günde ne kadar harcayabileceğini gösteren harcama ve bütçe takibi uygulaması.",
+      "operatingSystem": "Android",
+      "applicationCategory": "FinanceApplication",
+      "inLanguage": "tr-TR",
+      "image": "https://waiper.app/assets/img/og.png",
+      "screenshot": "https://waiper.app/assets/img/hero-phone.webp",
+      "publisher": { "@id": "https://waiper.app/#org" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://waiper.app/#faq",
+      "inLanguage": "tr-TR",
+      "mainEntity": [
+        { "@type": "Question", "name": "Banka şifremi ya da kart bilgimi istiyor mu?", "acceptedAnswer": { "@type": "Answer", "text": "Hayır. Waiper bankana bağlanmaz, hiçbir banka şifresi ya da kart bilgisi istemez. Otomatik algılama sadece telefonuna gelen bildirimleri okur." } },
+        { "@type": "Question", "name": "Hangi bankalarla çalışıyor?", "acceptedAnswer": { "@type": "Answer", "text": "Elle kayıt her bankayla çalışır. Otomatik algılama Türkiye'deki 29 banka ve fintech uygulamasının bildirimlerini tanır, listeden kendi kullandıklarını seçersin." } },
+        { "@type": "Question", "name": "iPhone'da var mı?", "acceptedAnswer": { "@type": "Answer", "text": "Şimdilik sadece Android." } },
+        { "@type": "Question", "name": "Ne zaman çıkıyor?", "acceptedAnswer": { "@type": "Answer", "text": "Waiper şu an kapalı testte. Google Play'de yayınlandığında bu sayfadan indirebileceksin." } },
+        { "@type": "Question", "name": "Ücretli mi?", "acceptedAnswer": { "@type": "Answer", "text": "Ücretsiz başlarsın, temel özellikler süre sınırı olmadan ücretsizdir. Premium aylık ya da yıllık abonelikle Google Play üzerinden alınır, ilk 7 gün ücretsizdir. Aboneliği Google Play'den istediğin an iptal edebilirsin." } },
+        { "@type": "Question", "name": "Verimi nasıl silerim?", "acceptedAnswer": { "@type": "Answer", "text": "Uygulamada Profil > Hesabı sil. Hesabın ve tüm verin kalıcı olarak silinir." } }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body class="home">
 <div class="wrap">

@@ -14,6 +14,8 @@ Plain HTML/CSS/JS, no build step. Deployed via Netlify directly from this repo.
 - `style.css`, `lang.js` - shared styling and the TR/EN language toggle
 - `r.html` - referral invite page, served for `/r/{code}` via `_redirects`; opens the app if installed, otherwise Google Play with `&referrer=ref%3D{code}` (read by the app's Install Referrer)
 - `.well-known/assetlinks.json` - Android App Links verification for `waiper.app` (Play App Signing + upload key SHA-256)
+- `robots.txt`, `sitemap.xml`, `llms.txt` - crawler rules (invite links `/r/` excluded), sitemap of the public pages, and a plain-text summary for AI search engines; update `sitemap.xml` `lastmod` and `llms.txt` when a page or feature changes
+- `404.html` - not-found page (Netlify serves it automatically)
 - `_redirects` / `_headers` - Netlify rewrites (`/r/*`, `/privacy`, `/terms`, `/about`) and the JSON content type for assetlinks
 
 To update: edit the HTML, commit, push to `main` - Netlify redeploys automatically.

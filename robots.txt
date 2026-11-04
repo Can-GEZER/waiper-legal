@@ -1,0 +1,8 @@
+# waiper.app - herkese açık tanıtım sitesi
+User-agent: *
+Allow: /
+# Davet linkleri (/r/{kod}) kişiye özel, aranmasın
+Disallow: /r/
+Disallow: /r.html
+
+Sitemap: https://waiper.app/sitemap.xml
