@@ -5,3 +5,6 @@
 /privacy    /privacy.html    200
 /terms      /terms.html      200
 /about      /about.html      200
+
+# Play reviews picked for the homepage (reviews.js). Proxied so the browser never calls Google directly.
+/api/reviews    https://firestore.googleapis.com/v1/projects/gen-lang-client-0946186208/databases/(default)/documents/publicReviews?pageSize=30    200
