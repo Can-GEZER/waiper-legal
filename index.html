@@ -31,7 +31,8 @@
       "@id": "https://waiper.app/#org",
       "name": "Waiper",
       "url": "https://waiper.app/",
-      "logo": "https://waiper.app/assets/img/logo-96.png"
+      "logo": "https://waiper.app/assets/img/logo-96.png",
+      "sameAs": ["https://play.google.com/store/apps/details?id=com.cangzr.waiper"]
     },
     {
       "@type": "WebSite",
@@ -49,10 +50,12 @@
       "operatingSystem": "Android",
       "applicationCategory": "FinanceApplication",
       "inLanguage": "tr-TR",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.cangzr.waiper",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.cangzr.waiper",
       "image": "https://waiper.app/assets/img/og.png",
       "screenshot": "https://waiper.app/assets/img/hero-phone.webp",
       "publisher": { "@id": "https://waiper.app/#org" },
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" }
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY", "url": "https://play.google.com/store/apps/details?id=com.cangzr.waiper" }
     },
     {
       "@type": "FAQPage",
@@ -62,7 +65,7 @@
         { "@type": "Question", "name": "Banka şifremi ya da kart bilgimi istiyor mu?", "acceptedAnswer": { "@type": "Answer", "text": "Hayır. Waiper bankana bağlanmaz, hiçbir banka şifresi ya da kart bilgisi istemez. Otomatik algılama sadece telefonuna gelen bildirimleri okur." } },
         { "@type": "Question", "name": "Hangi bankalarla çalışıyor?", "acceptedAnswer": { "@type": "Answer", "text": "Elle kayıt her bankayla çalışır. Otomatik algılama Türkiye'deki 29 banka ve fintech uygulamasının bildirimlerini tanır, listeden kendi kullandıklarını seçersin." } },
         { "@type": "Question", "name": "iPhone'da var mı?", "acceptedAnswer": { "@type": "Answer", "text": "Şimdilik sadece Android." } },
-        { "@type": "Question", "name": "Ne zaman çıkıyor?", "acceptedAnswer": { "@type": "Answer", "text": "Waiper şu an kapalı testte. Google Play'de yayınlandığında bu sayfadan indirebileceksin." } },
+        { "@type": "Question", "name": "Nereden indirebilirim?", "acceptedAnswer": { "@type": "Answer", "text": "Waiper Google Play'de yayında: https://play.google.com/store/apps/details?id=com.cangzr.waiper" } },
         { "@type": "Question", "name": "Ücretli mi?", "acceptedAnswer": { "@type": "Answer", "text": "Ücretsiz başlarsın, temel özellikler süre sınırı olmadan ücretsizdir. Premium aylık ya da yıllık abonelikle Google Play üzerinden alınır, ilk 7 gün ücretsizdir. Aboneliği Google Play'den istediğin an iptal edebilirsin." } },
         { "@type": "Question", "name": "Verimi nasıl silerim?", "acceptedAnswer": { "@type": "Answer", "text": "Uygulamada Profil > Hesabı sil. Hesabın ve tüm verin kalıcı olarak silinir." } }
       ]
@@ -100,10 +103,10 @@
         <h1>Ay sonunu tahmin etme, <span class="hl">bil.</span></h1>
         <p class="lead">Bankan ne harcadığını gösterir. Waiper ne kadar harcayabileceğini söyler: gelirinden düzenli ödemelerini, taksitlerini ve bu ayki harcamalarını düşer, günde ne kadar harcayabileceğini her gün hazır tutar.</p>
         <div class="cta">
-          <div class="store-soon" role="note">
-            <small>Yakında</small>
-            <span>Google Play'de</span>
-          </div>
+          <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.cangzr.waiper&amp;referrer=utm_source%3Dwaiper.app%26utm_medium%3Dwebsite" target="_blank" rel="noopener">
+            <small>Ücretsiz indir</small>
+            <span>Google Play'den al</span>
+          </a>
           <a class="ghost" href="#nasil">Nasıl çalışır</a>
         </div>
         <p class="note">Android için. Ücretsiz başlarsın, Premium'u 7 gün ücretsiz denersin.</p>
@@ -266,8 +269,8 @@
           <p>Şimdilik sadece Android.</p>
         </details>
         <details>
-          <summary>Ne zaman çıkıyor?</summary>
-          <p>Waiper şu an kapalı testte. Google Play'de yayınlandığında bu sayfadan indirebileceksin.</p>
+          <summary>Nereden indirebilirim?</summary>
+          <p>Waiper Google Play'de yayında. <a href="https://play.google.com/store/apps/details?id=com.cangzr.waiper&amp;referrer=utm_source%3Dwaiper.app%26utm_medium%3Dwebsite" target="_blank" rel="noopener">Google Play'den indir</a>.</p>
         </details>
         <details>
           <summary>Ücretli mi?</summary>
@@ -279,6 +282,13 @@
         </details>
       </div>
     </section>
+    <section class="section closing">
+      <h2>Ay sonunu bugünden gör</h2>
+      <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.cangzr.waiper&amp;referrer=utm_source%3Dwaiper.app%26utm_medium%3Dwebsite" target="_blank" rel="noopener">
+        <small>Ücretsiz indir</small>
+        <span>Google Play'den al</span>
+      </a>
+    </section>
   </main>
 
   <!-- ============ ENGLISH ============ -->
@@ -289,10 +299,10 @@
         <h1>Don't guess the end of the month. <span class="hl">Know it.</span></h1>
         <p class="lead">Your bank shows what you spent. Waiper tells you what you can spend: it takes your recurring payments, installments and this month's spending out of your income and keeps your daily allowance ready every day.</p>
         <div class="cta">
-          <div class="store-soon" role="note">
-            <small>Coming soon</small>
-            <span>to Google Play</span>
-          </div>
+          <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.cangzr.waiper&amp;referrer=utm_source%3Dwaiper.app%26utm_medium%3Dwebsite" target="_blank" rel="noopener">
+            <small>Free download</small>
+            <span>Get it on Google Play</span>
+          </a>
           <a class="ghost" href="#how">How it works</a>
         </div>
         <p class="note">For Android. Start free, try Premium free for 7 days.</p>
@@ -455,8 +465,8 @@
           <p>Android only for now.</p>
         </details>
         <details>
-          <summary>When does it launch?</summary>
-          <p>Waiper is in closed testing. Once it's on Google Play you'll be able to download it from this page.</p>
+          <summary>Where can I download it?</summary>
+          <p>Waiper is live on Google Play. <a href="https://play.google.com/store/apps/details?id=com.cangzr.waiper&amp;referrer=utm_source%3Dwaiper.app%26utm_medium%3Dwebsite" target="_blank" rel="noopener">Get it on Google Play</a>.</p>
         </details>
         <details>
           <summary>Is it paid?</summary>
@@ -467,6 +477,13 @@
           <p>In the app, Profile > Delete account. Your account and all your data are permanently deleted. Details on the <a href="/account-deletion.html">account deletion page</a>.</p>
         </details>
       </div>
+    </section>
+    <section class="section closing">
+      <h2>See the end of the month today</h2>
+      <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.cangzr.waiper&amp;referrer=utm_source%3Dwaiper.app%26utm_medium%3Dwebsite" target="_blank" rel="noopener">
+        <small>Free download</small>
+        <span>Get it on Google Play</span>
+      </a>
     </section>
   </main>
 

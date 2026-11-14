@@ -2,7 +2,7 @@
 
 > Waiper, Türkiye'deki genç çalışanlar için Android kişisel finans uygulaması. Gelirinden düzenli ödemeleri, taksitleri ve bu ayki harcamaları düşer, maaş gününe kadar günde ne kadar harcayabileceğini gösterir. Bankan ne harcadığını gösterir, Waiper ne kadar harcayabileceğini söyler.
 
-Durum: kapalı testte, Google Play'de yakında. Sadece Android. Arayüz Türkçe, para birimi TL.
+Durum: Google Play'de yayında (https://play.google.com/store/apps/details?id=com.cangzr.waiper). Sadece Android. Arayüz Türkçe, para birimi TL.
 
 ## Ne yapar
 
@@ -27,6 +27,7 @@ Durum: kapalı testte, Google Play'de yakında. Sadece Android. Arayüz Türkçe
 
 ## Sayfalar
 
+- [Google Play](https://play.google.com/store/apps/details?id=com.cangzr.waiper): indirme sayfası
 - [Ana sayfa](https://waiper.app/): özellikler, gizlilik, ücretsiz ve Premium karşılaştırması, SSS
 - [Hakkında](https://waiper.app/about.html): nasıl çalıştığı ve özellikleri
 - [Gizlilik Politikası](https://waiper.app/privacy.html): KVKK aydınlatma metni dahil

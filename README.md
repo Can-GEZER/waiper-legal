@@ -4,7 +4,7 @@ Static privacy policy and account/data deletion pages for the [Waiper](https://g
 
 Plain HTML/CSS/JS, no build step. Deployed via Netlify directly from this repo.
 
-- `index.html` + `home.css` - public landing page for waiper.app (hero, features, screenshots, privacy, Free vs Premium, FAQ; TR+EN). The store button says "coming soon" until the app is public on Google Play
+- `index.html` + `home.css` - public landing page for waiper.app (hero, features, screenshots, privacy, Free vs Premium, FAQ; TR+EN). The store buttons link to the Google Play listing with `referrer=utm_source=waiper.app&utm_medium=website` (the app records it as a campaign install)
 - `assets/` - landing page images (screenshots from the Play listing as WebP, Open Graph image, icons) and the self-hosted Space Grotesk font (OFL, `assets/fonts/OFL.txt`); no third-party requests, no cookies
 - `favicon.png` - site icon
 - `privacy.html` - Privacy Policy (Turkish + English toggle)
