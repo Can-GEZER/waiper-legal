@@ -39,3 +39,8 @@ Durum: Google Play'de yayında (https://play.google.com/store/apps/details?id=co
 - [Harcanabilir tutar nedir, nasıl hesaplanır?](https://waiper.app/blog/harcanabilir-tutar-nedir/): formül, örnek hesap, günlük pay ve harcama hızı
 - [Taksit yükü nasıl hesaplanır?](https://waiper.app/blog/taksit-yuku-nasil-hesaplanir/): ay ay taksit tablosu, gelire oranı, yeni taksitten önce sorulacak sorular
 - [Abonelik takibi nasıl yapılır?](https://waiper.app/blog/abonelik-takibi/): dört adımda abonelik dökümü, yıllık ödemeleri aya bölme, zam ve kullanılmayan abonelik
+- [Maaş gününe göre bütçe nasıl yapılır?](https://waiper.app/blog/maas-gunune-gore-butce/): maaş döngüsü, ödemeleri döneme yerleştirme, kısa aylar ve iki maaşlı evler
+- [Harcama takibi nasıl yapılır?](https://waiper.app/blog/harcama-takibi-nasil-yapilir/): defter, Excel, banka uygulaması ve takip uygulaması karşılaştırması, takibi sürdürmek için beş kural
+- [Maaş ay sonuna neden yetmiyor?](https://waiper.app/blog/maas-ay-sonuna-yetmiyor/): ay sonunu getirmeyi zorlaştıran altı neden ve çözümleri
+- [Düzensiz gelirle bütçe nasıl yapılır?](https://waiper.app/blog/duzensiz-gelirle-butce/): serbest çalışanlar için aylık eşik, taban gelir ve tampon yöntemi
+- [Birikim hedefi nasıl belirlenir?](https://waiper.app/blog/birikim-hedefi-nasil-belirlenir/): hedef tutarı, tarih ve aylık katkı hesabı, hedefi bütçeye sığdırma
