@@ -1,8 +1,5 @@
 /* Blog list and post pages. Loaded after style.css and home.css, body class "home blog". */
 
-.home.blog nav.top-links {
-  display: flex;
-}
 
 .blog main {
   padding-top: 32px;

@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url(/assets/fonts/space-grotesk-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url(/assets/fonts/space-grotesk-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
   --bg: #0A0E0A;
   --surface: #141A14;
@@ -19,6 +37,7 @@
 
 html {
   color-scheme: dark;
+  scroll-padding-top: 88px;
 }
 
 body {
@@ -33,18 +52,25 @@ body {
 .wrap {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 32px 20px 80px;
+  padding: 0 20px 80px;
 }
 
+/* ---- top bar: the same on every page (scripts/chrome.py writes the markup) ---- */
+
 header.site {
+  position: sticky;
+  top: 0;
+  z-index: 50;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  padding: 20px 0 8px;
+  gap: 12px;
+  margin: 0 -20px 32px;
+  padding: 14px 20px;
+  background: rgba(10, 14, 10, 0.86);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
-  margin-bottom: 32px;
-  flex-wrap: wrap;
 }
 
 .brand {
@@ -55,37 +81,23 @@ header.site {
   color: var(--text-primary);
 }
 
-.brand .logo-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--primary);
-  box-shadow: 0 0 12px var(--primary);
-  flex-shrink: 0;
+.brand img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
 }
 
 .brand span {
+  font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 700;
   font-size: 1.15rem;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.01em;
 }
 
-nav.top-links {
+.header-right {
   display: flex;
-  gap: 18px;
-  font-size: 0.9rem;
-}
-
-nav.top-links a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-
-nav.top-links a:hover,
-nav.top-links a[aria-current="page"] {
-  color: var(--primary);
-  border-bottom-color: var(--primary);
+  align-items: center;
+  gap: 10px;
 }
 
 .lang-toggle {
@@ -99,8 +111,8 @@ nav.top-links a[aria-current="page"] {
   background: transparent;
   border: none;
   color: var(--text-secondary);
-  padding: 6px 14px;
-  font-size: 0.8rem;
+  padding: 7px 12px;
+  font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   cursor: pointer;
@@ -110,6 +122,159 @@ nav.top-links a[aria-current="page"] {
   background: var(--primary);
   color: var(--on-primary);
 }
+
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 9999px;
+  background: var(--primary);
+  color: var(--on-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header-cta:hover {
+  box-shadow: 0 4px 18px rgba(0, 255, 133, 0.3);
+}
+
+.menu summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.menu summary:hover,
+.menu[open] summary {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+  display: block;
+  width: 16px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform 150ms ease;
+}
+
+.menu-icon {
+  position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.menu-icon::before {
+  top: -5px;
+}
+
+.menu-icon::after {
+  top: 5px;
+}
+
+.menu[open] .menu-icon {
+  background: transparent;
+}
+
+.menu[open] .menu-icon::before {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.menu[open] .menu-icon::after {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+/* positioned against the sticky header, so it spans the bar on small screens */
+.menu-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 20px;
+  width: min(640px, calc(100% - 40px));
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 24px;
+  padding: 24px;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+}
+
+.menu-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0 0 8px;
+}
+
+.menu-group a {
+  display: block;
+  padding: 7px 0;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.menu-group a:hover {
+  color: var(--primary);
+}
+
+.menu-group a[aria-current="page"] {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .menu-panel {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-height: calc(100vh - 96px);
+    overflow-y: auto;
+  }
+
+  .menu summary .menu-label {
+    display: none;
+  }
+
+  .menu summary {
+    width: 40px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .header-cta {
+    display: none;
+  }
+}
+
+/* ---- document pages (privacy, terms, about, account deletion) ---- */
 
 h1 {
   font-size: 1.75rem;
@@ -233,27 +398,36 @@ th {
   border: 1px solid var(--border);
 }
 
+/* ---- footer: the same on every page ---- */
+
 footer.site {
-  margin-top: 60px;
+  margin-top: 72px;
   padding-top: 20px;
   border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 20px;
   color: var(--text-secondary);
   font-size: 0.82rem;
 }
 
 footer.site a {
   color: var(--text-secondary);
+  text-decoration: none;
 }
 
-@media (max-width: 480px) {
-  header.site {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+footer.site a:hover {
+  color: var(--text-primary);
 }
 
-.brand img {
-  width: 28px;
-  height: 28px;
-  border-radius: 8px;
+footer.site .foot-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
