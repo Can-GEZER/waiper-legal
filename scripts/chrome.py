@@ -14,13 +14,6 @@ PLAY = ('https://play.google.com/store/apps/details?id=com.cangzr.waiper'
 
 # (group title tr, en, [(href, tr, en), ...])
 MENU = [
-    ('Uygulama', 'App', [
-        ('/', 'Ana sayfa', 'Home'),
-        ('/#ozellikler', 'Özellikler', 'Features'),
-        ('/#gizlilik', 'Gizlilik ve güven', 'Privacy and trust'),
-        ('/#premium', 'Ücretsiz ve Premium', 'Free and Premium'),
-        ('/#sss', 'Sık sorulanlar', 'FAQ'),
-    ]),
     ('İçerik', 'Content', [
         ('/blog/', 'Blog', 'Blog (Turkish)'),
         ('/araclar/', 'Hesaplama araçları', 'Calculators (Turkish)'),

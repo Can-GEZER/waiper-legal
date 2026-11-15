@@ -67,10 +67,10 @@ header.site {
   gap: 12px;
   margin: 0 -20px 32px;
   padding: 14px 20px;
-  background: rgba(10, 14, 10, 0.86);
+  /* no fill and no border; the blur alone keeps the bar readable over scrolling content */
+  background: transparent;
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border);
 }
 
 .brand {
@@ -214,9 +214,9 @@ header.site {
   position: absolute;
   top: calc(100% + 8px);
   right: 20px;
-  width: min(640px, calc(100% - 40px));
+  width: min(460px, calc(100% - 40px));
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 8px 24px;
   padding: 24px;
   background: var(--surface-elevated);
