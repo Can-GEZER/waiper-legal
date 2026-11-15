@@ -33,3 +33,9 @@ Durum: Google Play'de yayında (https://play.google.com/store/apps/details?id=co
 - [Gizlilik Politikası](https://waiper.app/privacy.html): KVKK aydınlatma metni dahil
 - [Hizmet Şartları](https://waiper.app/terms.html): Premium abonelik şartları dahil
 - [Hesap ve Veri Silme](https://waiper.app/account-deletion.html)
+
+## Blog
+
+- [Harcanabilir tutar nedir, nasıl hesaplanır?](https://waiper.app/blog/harcanabilir-tutar-nedir/): formül, örnek hesap, günlük pay ve harcama hızı
+- [Taksit yükü nasıl hesaplanır?](https://waiper.app/blog/taksit-yuku-nasil-hesaplanir/): ay ay taksit tablosu, gelire oranı, yeni taksitten önce sorulacak sorular
+- [Abonelik takibi nasıl yapılır?](https://waiper.app/blog/abonelik-takibi/): dört adımda abonelik dökümü, yıllık ödemeleri aya bölme, zam ve kullanılmayan abonelik

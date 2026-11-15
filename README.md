@@ -11,6 +11,7 @@ Plain HTML/CSS/JS, no build step. Deployed via Netlify directly from this repo.
 - `account-deletion.html` - Account & Data Deletion instructions (Turkish + English toggle)
 - `terms.html` - Terms of Service incl. Premium subscription terms (Turkish + English toggle)
 - `about.html` - About the app, how it works and features (Turkish + English toggle), opened from the app's Profil > Hakkında
+- `blog/` + `blog.css` - blog, Turkish only (no language toggle): `blog/index.html` is the list, each post is `blog/{slug}/index.html` (URL `/blog/{slug}/`). Pages use `body class="home blog"` and load `style.css`, `home.css`, `blog.css`. New post checklist: copy an existing post folder, change title/description/canonical/Open Graph/JSON-LD (`BlogPosting` + `BreadcrumbList`), then add it to `blog/index.html` (card + `blogPost` in JSON-LD), the other posts' "Diğer yazılar" list, `sitemap.xml` and `llms.txt`; the homepage "Blogdan" section shows three posts. Play links in posts use `utm_medium=blog`
 - `style.css`, `lang.js` - shared styling and the TR/EN language toggle
 - `r.html` - referral invite page, served for `/r/{code}` via `_redirects`; opens the app if installed, otherwise Google Play with `&referrer=ref%3D{code}` (read by the app's Install Referrer)
 - `.well-known/assetlinks.json` - Android App Links verification for `waiper.app` (Play App Signing + upload key SHA-256)
