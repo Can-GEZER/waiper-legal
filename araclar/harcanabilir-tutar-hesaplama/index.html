@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harcanabilir tutar hesaplama aracı - Waiper</title>
+<meta name="description" content="Gelirini, düzenli ödemelerini, taksitlerini ve bu ayki harcamanı gir: maaşa kadar ne kadar harcayabileceğini ve günlük payını anında gör. Ücretsiz, kayıt gerekmez.">
+<meta name="theme-color" content="#0A0E0A">
+<link rel="canonical" href="https://waiper.app/araclar/harcanabilir-tutar-hesaplama/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://waiper.app/araclar/harcanabilir-tutar-hesaplama/">
+<meta property="og:site_name" content="Waiper">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Harcanabilir tutar hesaplama">
+<meta property="og:description" content="Gelirini, düzenli ödemelerini, taksitlerini ve bu ayki harcamanı gir: maaşa kadar ne kadar harcayabileceğini ve günlük payını anında gör. Ücretsiz, kayıt gerekmez.">
+<meta property="og:image" content="https://waiper.app/assets/img/og/harcanabilir-tutar-hesaplama.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/home.css">
+<link rel="stylesheet" href="/blog.css">
+<link rel="stylesheet" href="/tools.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://waiper.app/araclar/harcanabilir-tutar-hesaplama/#tool",
+      "name": "Harcanabilir tutar hesaplama",
+      "url": "https://waiper.app/araclar/harcanabilir-tutar-hesaplama/",
+      "description": "Gelirini, düzenli ödemelerini, taksitlerini ve bu ayki harcamanı gir: maaşa kadar ne kadar harcayabileceğini ve günlük payını anında gör. Ücretsiz, kayıt gerekmez.",
+      "inLanguage": "tr-TR",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "TRY"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Waiper",
+        "url": "https://waiper.app/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana sayfa",
+          "item": "https://waiper.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Araçlar",
+          "item": "https://waiper.app/araclar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Harcanabilir tutar hesaplama",
+          "item": "https://waiper.app/araclar/harcanabilir-tutar-hesaplama/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="home blog">
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="/">
+      <img src="/assets/img/logo-96.png" alt="" width="32" height="32">
+      <span>Waiper</span>
+    </a>
+    <nav class="top-links">
+      <a href="/#ozellikler">Özellikler</a>
+      <a href="/blog/">Blog</a>
+      <a href="/araclar/" aria-current="page">Araçlar</a>
+      <a href="/#sss">SSS</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="post">
+      <nav class="crumbs" aria-label="Sayfa yolu"><a href="/">Ana sayfa</a> / <a href="/araclar/">Araçlar</a></nav>
+      <h1>Harcanabilir tutar hesaplama</h1>
+      <p class="lead">Gelirinden düzenli ödemelerini, taksitlerini ve bu ay harcadıklarını düş. Kalan, bir sonraki maaşa kadar harcayabileceğin tutardır.</p>
+
+      <form class="calc" id="calc-spendable" onsubmit="return false">
+        <div class="calc-fields">
+          <div class="field">
+            <label for="gelir">Aylık gelir</label>
+            <div class="input"><input id="gelir" type="text" inputmode="decimal" autocomplete="off" placeholder="45.000"><span class="unit">TL</span></div>
+          </div>
+          <div class="field">
+            <label for="duzenli">Düzenli ödemeler (kira, fatura, abonelik)</label>
+            <div class="input"><input id="duzenli" type="text" inputmode="decimal" autocomplete="off" placeholder="18.100"><span class="unit">TL</span></div>
+          </div>
+          <div class="field">
+            <label for="taksit">Bu aya düşen taksitler</label>
+            <div class="input"><input id="taksit" type="text" inputmode="decimal" autocomplete="off" placeholder="4.000"><span class="unit">TL</span></div>
+          </div>
+          <div class="field">
+            <label for="harcanan">Bu ay şimdiye kadar harcanan</label>
+            <div class="input"><input id="harcanan" type="text" inputmode="decimal" autocomplete="off" placeholder="9.400"><span class="unit">TL</span></div>
+          </div>
+          <div class="field">
+            <label for="gun">Maaşa kalan gün</label>
+            <div class="input"><input id="gun" type="text" inputmode="decimal" autocomplete="off" placeholder="18"><span class="unit">gün</span></div>
+          </div>
+        </div>
+        <div class="calc-result" aria-live="polite">
+          <p class="label">Harcanabilir tutar</p>
+          <p class="value idle" id="sonuc-tutar">0 TL</p>
+          <p class="sub" id="sonuc-gunluk">Hesap için aylık gelirini gir.</p>
+          <p class="calc-note">Girdiğin rakamlar tarayıcında kalır, hiçbir yere gönderilmez ve kaydedilmez.</p>
+        </div>
+      </form>
+
+      <h2>Nasıl hesaplanır?</h2>
+      <div class="formula">Harcanabilir tutar = Gelir - Düzenli ödemeler - Taksitler - Bu ayki harcamalar<br>Günlük pay = Harcanabilir tutar / Maaşa kalan gün</div>
+      <p>Hesabındaki bakiye, henüz çıkmamış kirayı ve faturaları da içerdiği için olduğundan yüksek görünür. Harcanabilir tutar bu ödemeleri baştan düşer ve sana gerçekten serbest olan parayı gösterir. Ayrıntılı anlatım ve örnek için: <a href="/blog/harcanabilir-tutar-nedir/">harcanabilir tutar nedir, nasıl hesaplanır</a>.</p>
+
+      <h2>Alanlara ne yazmalı?</h2>
+      <ul>
+        <li><strong>Aylık gelir:</strong> bu ay hesabına geçen maaş ve diğer gelirler.</li>
+        <li><strong>Düzenli ödemeler:</strong> kira, aidat, faturalar, internet ve aboneliklerin aylık toplamı. Yıllık ödemeleri 12'ye bölerek ekle.</li>
+        <li><strong>Taksitler:</strong> önceki alışverişlerden bu aya düşen taksitlerin toplamı.</li>
+        <li><strong>Harcanan:</strong> market, ulaşım, yemek gibi bu ay yaptığın değişken harcamalar.</li>
+        <li><strong>Kalan gün:</strong> bir sonraki maaşına kaç gün kaldığı.</li>
+      </ul>
+
+      <h2>Sonuç eksi çıkarsa</h2>
+      <p>Eksi bir tutar, bu ayki gelirinden fazlasını harcadığın anlamına gelir. Aradaki fark birikimden ya da kredi kartından karşılanıyordur. Nedenleri ve çözümleri için: <a href="/blog/maas-ay-sonuna-yetmiyor/">maaş ay sonuna neden yetmiyor</a>.</p>
+
+      <aside class="post-cta">
+        <h2>Bu hesabı her gün elle yapma</h2>
+        <p>Waiper gelirini ve düzenli ödemelerini bir kez alır, harcadıkça harcanabilir tutarını ve günlük payını kendisi günceller. Temel özellikler ücretsiz.</p>
+        <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.cangzr.waiper&amp;referrer=utm_source%3Dwaiper.app%26utm_medium%3Dtool%26utm_campaign%3Dharcanabilir-tutar-hesaplama" target="_blank" rel="noopener">
+          <small>Ücretsiz indir</small>
+          <span>Google Play'den al</span>
+        </a>
+      </aside>
+    </article>
+  </main>
+
+  <footer class="site">
+    <span>&copy; 2026 Waiper</span>
+    <nav>
+      <a href="/">Ana sayfa</a>
+      <a href="/blog/">Blog</a>
+      <a href="/araclar/">Araçlar</a>
+      <a href="/privacy.html">Gizlilik Politikası</a>
+    </nav>
+  </footer>
+</div>
+<script src="/tools.js" defer></script>
+</body>
+</html>

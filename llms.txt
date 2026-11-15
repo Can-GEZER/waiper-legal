@@ -44,3 +44,8 @@ Durum: Google Play'de yayında (https://play.google.com/store/apps/details?id=co
 - [Maaş ay sonuna neden yetmiyor?](https://waiper.app/blog/maas-ay-sonuna-yetmiyor/): ay sonunu getirmeyi zorlaştıran altı neden ve çözümleri
 - [Düzensiz gelirle bütçe nasıl yapılır?](https://waiper.app/blog/duzensiz-gelirle-butce/): serbest çalışanlar için aylık eşik, taban gelir ve tampon yöntemi
 - [Birikim hedefi nasıl belirlenir?](https://waiper.app/blog/birikim-hedefi-nasil-belirlenir/): hedef tutarı, tarih ve aylık katkı hesabı, hedefi bütçeye sığdırma
+
+## Araçlar
+
+- [Harcanabilir tutar hesaplama](https://waiper.app/araclar/harcanabilir-tutar-hesaplama/): gelir, düzenli ödemeler, taksitler ve harcamadan kalan tutar ile günlük pay; tarayıcıda çalışır
+- [Taksit yükü hesaplama](https://waiper.app/araclar/taksit-yuku-hesaplama/): devam eden taksitlerden önündeki altı ayın aylık taksit toplamı; tarayıcıda çalışır

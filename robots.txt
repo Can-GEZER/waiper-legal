@@ -5,4 +5,9 @@ Allow: /
 Disallow: /r/
 Disallow: /r.html
 
+
+
+# Share image template, not a page
+Disallow: /scripts/
+
 Sitemap: https://waiper.app/sitemap.xml

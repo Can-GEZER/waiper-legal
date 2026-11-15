@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Share image template</title>
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/home.css">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background:
+      radial-gradient(ellipse 70% 80% at 85% 0%, rgba(0, 255, 133, 0.16), transparent 60%),
+      #0A0E0A;
+    font-family: "Space Grotesk", sans-serif;
+    color: #E8FFE8;
+  }
+  .frame { box-sizing: border-box; width: 1200px; height: 630px; padding: 64px 72px; display: flex; flex-direction: column; }
+  .top { display: flex; align-items: center; gap: 16px; font-size: 34px; font-weight: 700; }
+  .top img { width: 56px; height: 56px; border-radius: 14px; }
+  .kind { margin-top: auto; color: #00FF85; font-size: 22px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; }
+  h1 { font-family: "Space Grotesk", sans-serif; font-size: 68px; line-height: 1.08; letter-spacing: -0.02em; margin: 18px 0 0; max-width: 1000px; color: #E8FFE8; }
+  .foot { margin-top: 36px; font-size: 24px; color: #9FB0A0; font-family: Consolas, monospace; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="top"><img src="/assets/img/logo-96.png" alt=""><span>Waiper</span></div>
+  <div class="kind" id="kind"></div>
+  <h1 id="title"></h1>
+  <div class="foot" id="foot"></div>
+</div>
+<script>
+  // scripts/og.py opens this page with ?k=kind&t=title&f=footer and screenshots it.
+  var q = new URLSearchParams(location.search);
+  document.getElementById("kind").textContent = q.get("k") || "";
+  document.getElementById("title").textContent = q.get("t") || "";
+  document.getElementById("foot").textContent = q.get("f") || "";
+  if ((q.get("t") || "").length > 44) document.getElementById("title").style.fontSize = "58px";
+</script>
+</body>
+</html>

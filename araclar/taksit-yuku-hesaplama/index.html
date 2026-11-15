@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taksit yükü hesaplama aracı - Waiper</title>
+<meta name="description" content="Devam eden taksitlerini gir, önündeki altı ayda kartından her ay ne kadar taksit düşeceğini ve en yüklü ayını gör. Ücretsiz taksit yükü hesaplama aracı.">
+<meta name="theme-color" content="#0A0E0A">
+<link rel="canonical" href="https://waiper.app/araclar/taksit-yuku-hesaplama/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://waiper.app/araclar/taksit-yuku-hesaplama/">
+<meta property="og:site_name" content="Waiper">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Taksit yükü hesaplama">
+<meta property="og:description" content="Devam eden taksitlerini gir, önündeki altı ayda kartından her ay ne kadar taksit düşeceğini ve en yüklü ayını gör. Ücretsiz taksit yükü hesaplama aracı.">
+<meta property="og:image" content="https://waiper.app/assets/img/og/taksit-yuku-hesaplama.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/home.css">
+<link rel="stylesheet" href="/blog.css">
+<link rel="stylesheet" href="/tools.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://waiper.app/araclar/taksit-yuku-hesaplama/#tool",
+      "name": "Taksit yükü hesaplama",
+      "url": "https://waiper.app/araclar/taksit-yuku-hesaplama/",
+      "description": "Devam eden taksitlerini gir, önündeki altı ayda kartından her ay ne kadar taksit düşeceğini ve en yüklü ayını gör. Ücretsiz taksit yükü hesaplama aracı.",
+      "inLanguage": "tr-TR",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "TRY"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Waiper",
+        "url": "https://waiper.app/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana sayfa",
+          "item": "https://waiper.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Araçlar",
+          "item": "https://waiper.app/araclar/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Taksit yükü hesaplama",
+          "item": "https://waiper.app/araclar/taksit-yuku-hesaplama/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="home blog">
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="/">
+      <img src="/assets/img/logo-96.png" alt="" width="32" height="32">
+      <span>Waiper</span>
+    </a>
+    <nav class="top-links">
+      <a href="/#ozellikler">Özellikler</a>
+      <a href="/blog/">Blog</a>
+      <a href="/araclar/" aria-current="page">Araçlar</a>
+      <a href="/#sss">SSS</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="post">
+      <nav class="crumbs" aria-label="Sayfa yolu"><a href="/">Ana sayfa</a> / <a href="/araclar/">Araçlar</a></nav>
+      <h1>Taksit yükü hesaplama</h1>
+      <p class="lead">Devam eden taksitlerini satır satır gir. Önündeki altı ayın her birinde kartından toplam ne kadar taksit düşeceğini görürsün.</p>
+
+      <form class="calc" id="calc-installments" onsubmit="return false">
+        <div class="rows" id="taksit-satirlari"></div>
+        <template id="taksit-satiri">
+          <div class="row">
+            <div class="field">
+              <label>Alışveriş</label>
+              <div class="input"><input class="name" type="text" autocomplete="off" placeholder="Telefon" aria-label="Alışveriş adı"></div>
+            </div>
+            <div class="field">
+              <label>Aylık taksit</label>
+              <div class="input"><input data-aylik type="text" inputmode="decimal" autocomplete="off" placeholder="2.000" aria-label="Aylık taksit tutarı"><span class="unit">TL</span></div>
+            </div>
+            <div class="field">
+              <label>Kalan taksit</label>
+              <div class="input"><input data-kalan type="text" inputmode="numeric" autocomplete="off" placeholder="8" aria-label="Kalan taksit sayısı"></div>
+            </div>
+            <button type="button" class="remove" aria-label="Satırı sil">&times;</button>
+          </div>
+        </template>
+        <button type="button" class="add" id="taksit-ekle">Taksit ekle</button>
+        <div class="income">
+          <div class="field">
+            <label for="gelir">Aylık gelir (isteğe bağlı)</label>
+            <div class="input"><input id="gelir" type="text" inputmode="decimal" autocomplete="off" placeholder="45.000"><span class="unit">TL</span></div>
+          </div>
+        </div>
+        <div class="calc-result" aria-live="polite">
+          <p class="label">Önündeki altı ay</p>
+          <div class="table-scroll">
+            <table>
+              <tbody id="sonuc-tablo"></tbody>
+            </table>
+          </div>
+          <p class="sub" id="sonuc-ozet"></p>
+          <p class="calc-note">Girdiğin rakamlar tarayıcında kalır, hiçbir yere gönderilmez ve kaydedilmez.</p>
+        </div>
+      </form>
+
+      <h2>Taksit yükü nedir?</h2>
+      <p>Taksit yükü, belirli bir ayda kartından düşecek bütün taksitlerin toplamıdır. Tek bir alışverişin taksiti küçük görünür, ama hepsi aynı maaştan çıkar. Tablo, her taksiti bittiği aya kadar ilgili aylara dağıtır ve ayları toplar.</p>
+
+      <h2>Sonucu nasıl okumalı?</h2>
+      <ul>
+        <li><strong>En yüklü ay:</strong> yeni bir taksite girmeden önce bakılacak rakam ortalama değil, en ağır aydır.</li>
+        <li><strong>Düşüş noktaları:</strong> bir taksit bittiğinde toplam düşer. Yeni taksit için en uygun zaman o aydan sonrasıdır.</li>
+        <li><strong>Gelire oranı:</strong> oranı kira ve faturalarınla birlikte değerlendir. Kirası yüksek biri aynı taksit yükünü daha zor taşır.</li>
+      </ul>
+      <p>Örnek tablo ve yeni taksitten önce sorulacak üç soru için: <a href="/blog/taksit-yuku-nasil-hesaplanir/">taksit yükü nasıl hesaplanır</a>.</p>
+
+      <aside class="post-cta">
+        <h2>Taksit tablonu Waiper tutsun</h2>
+        <p>Taksitli alışverişi bir kez girersin, Waiper her aya kendi payını yazar ve harcanabilir tutarından düşer. Gelecek ayın taksit toplamı ücretsiz, altı aylık görünüm Premium.</p>
+        <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.cangzr.waiper&amp;referrer=utm_source%3Dwaiper.app%26utm_medium%3Dtool%26utm_campaign%3Dtaksit-yuku-hesaplama" target="_blank" rel="noopener">
+          <small>Ücretsiz indir</small>
+          <span>Google Play'den al</span>
+        </a>
+      </aside>
+    </article>
+  </main>
+
+  <footer class="site">
+    <span>&copy; 2026 Waiper</span>
+    <nav>
+      <a href="/">Ana sayfa</a>
+      <a href="/blog/">Blog</a>
+      <a href="/araclar/">Araçlar</a>
+      <a href="/privacy.html">Gizlilik Politikası</a>
+    </nav>
+  </footer>
+</div>
+<script src="/tools.js" defer></script>
+</body>
+</html>
